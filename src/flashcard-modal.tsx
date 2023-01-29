@@ -490,7 +490,7 @@ export class FlashcardModal extends Modal {
             return;
         }
 
-        const dueString: string = due.format("YYYY-MM-DD");
+        const dueString: string = due.format("YYYY-MM-DD-HH-mm");
 
         let fileText: string = await this.app.vault.read(this.currentCard.note);
         const replacementRegex = new RegExp(escapeRegexString(this.currentCard.cardText), "gm");
