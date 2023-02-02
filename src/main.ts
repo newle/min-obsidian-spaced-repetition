@@ -846,7 +846,7 @@ export default class SRPlugin extends Plugin {
                         this.deckTree.countFlashcard([...deckPath]);
                         continue;
                     }
-
+                    
                     if (dueUnix <= now + this.data.settings.reviewBeforeDue * 24 * 3600 * 1000) {
                         cardObj.interval = interval;
                         cardObj.ease = ease;
